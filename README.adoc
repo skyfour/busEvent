@@ -1,0 +1,33 @@
+[[spring-cloud-bus]]
+= Spring Cloud Bus
+:page-section-summary-toc: 1
+
+
+[[quick-start]]
+== Quick Start
+
+spring cloud bus kafka自定义事件的基本使用,如果要更改消息队列,需要自行实现BusBridge,完成对事件的不同实例的同步.
+
+[[building]]
+== Building
+
+:jdkversion: 17
+:springbootversion: 3.4.0
+:springcloudversion: 2024.0.0
+:springcloudbusversion: 4.2.0
+
+[[basic-compile-and-test]]
+== Basic Compile and Test
+
+jdk版本 {jdkversion} 以上.
+
+spring boot 3.4.0
+
+spring cloud 2024.0.0
+
+NOTE: 自定义事件需要注意使用默认BusBridge的话,需要注意originService的设置,
+这个字段在RemoteApplicationEventListener做了区分,为了避免重复send其他实例的事件
+
+
+
+
